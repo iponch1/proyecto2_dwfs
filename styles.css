@@ -93,7 +93,7 @@ body {
     background-color: #388e3c; 
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 610px) {
     .form-group input {
       flex: 1;
       margin-right: 0;
