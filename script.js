@@ -1,6 +1,6 @@
 class SPA {
     constructor() {
-      this.elements = JSON.parse(localStorage.getItem('elements')) || ['Task 1', 'Task 2', 'Task 3'];
+      this.elements = JSON.parse(localStorage.getItem('elements')) || ['Poncho Benavides', 'Valeria Rodriguez', 'Alvaro Garcia'];
       this.renderElements();
       this.setupEventListeners();
     }
