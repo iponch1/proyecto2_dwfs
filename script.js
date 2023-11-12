@@ -1,6 +1,6 @@
 class SPA {
     constructor() {
-      this.elements = JSON.parse(localStorage.getItem('elements')) || ['Poncho Benavides', 'Valeria Rodriguez', 'Alvaro Garcia'];
+      this.elements = JSON.parse(localStorage.getItem('elements')) || [];
       this.renderElements();
       this.setupEventListeners();
     }
@@ -19,8 +19,8 @@ class SPA {
         numberSpan.textContent = `${index + 1}.`;
         contentSpan.textContent = element;
   
-        const updateButton = this.createButton('Actualiza tus datos', () => this.updateElement(index));
-        const deleteButton = this.createButton('Eliminar Reserva', () => this.deleteElement(index));
+        const updateButton = this.createButton('Actualizar', () => this.updateElement(index));
+        const deleteButton = this.createButton('Eliminar', () => this.deleteElement(index));
   
         listItem.appendChild(numberSpan);
         listItem.appendChild(contentSpan);
@@ -48,6 +48,12 @@ class SPA {
         this.saveToLocalStorage();
         this.renderElements();
         input.value = '';
+  
+        const elementList = document.getElementById('elementList');
+        const newlyAddedElement = elementList.lastElementChild;
+        if (newlyAddedElement) {
+          newlyAddedElement.classList.add('list-item');
+        }
       }
     }
   
@@ -61,7 +67,7 @@ class SPA {
     }
   
     deleteElement(index) {
-      const confirmDelete = confirm('Estás seguro de borrarlo?');
+      const confirmDelete = confirm('¿Estás seguro de que quieres eliminar esto?');
       if (confirmDelete) {
         this.elements.splice(index, 1);
         this.saveToLocalStorage();

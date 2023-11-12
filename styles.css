@@ -2,52 +2,94 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fce4ec; 
+    background-color: #fce4ec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
   }
   
   .header {
-    position: relative;
-    background-color: #ff9800; 
+    background-color: #ff9800;
     text-align: center;
-    border: #ffb74d 10px solid; 
-    border-radius: 9px;
-    padding: 10px; 
+    border: #ffb74d 10px solid;
+    border-radius: 8px;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
   }
   
   .logo {
-    position: absolute;
-    top: 5px; 
-    left: 5px; 
-    max-width: 100px; 
+    max-width: 80px;
     height: auto;
+    margin-right: 10px;
   }
   
-  .text-center {
-    text-align: center;
-  }
-  .app-container {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
   .header-text {
- 
-    margin-left: 100px;
+    flex: 1;
+  }
+  
+  .app-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
   }
   
   .button {
     cursor: pointer;
-    background-color: #ffb74d; 
+    background-color: #ffb74d;
     color: #fff;
     border: none;
     padding: 10px 15px;
     border-radius: 8px;
     margin-top: 10px;
+    font-size: 14px;
   }
   
   .button:hover {
-    background-color: #ff9800; 
+    background-color: #ff9800;
+  }
+  
+  .form-group,
+  .element-list-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .form-group input {
+    margin-bottom: 8px;
+    padding: 10px;
+  }
+  
+  .form-group button,
+  .element-list-container button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+  }
+  
+  .form-group button:hover,
+  .element-list-container button:hover {
+    background-color: #388e3c;
   }
   
   .element-list {
@@ -58,7 +100,8 @@ body {
   .list-item {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #ffcdd2; 
+    align-items: center;
+    border-bottom: 1px solid #ffcdd2;
     padding: 10px;
   }
   
@@ -66,49 +109,13 @@ body {
     flex: 1;
   }
   
-  .button-group button {
-    margin-left: 8px;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column; 
-    margin-bottom: 20px;
-  }
-  
-  .form-group input {
-    margin-bottom: 8px; 
-    padding: 10px;
-  }
-  
-  .form-group button {
-    background-color: #4caf50; 
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-  }
-  
-  .form-group button:hover {
-    background-color: #388e3c; 
-  }
-
-  @media (max-width: 610px) {
-    .form-group input {
-      flex: 1;
-      margin-right: 0;
-    }
-  }
-
   .footer {
-    background-color: #333; 
-    color: #fff; 
+    background-color: #333;
+    color: #fff;
     padding: 20px;
     text-align: center;
-  }
-  
-  .footer-content {
-    max-width: 600px;
-    margin: 0 auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
   }
   
