@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Page Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <img src="./assets/pngwing.com.png" alt="Logo del restaurante" class="logo">
+    <h1 class="header-text">Restaurante Poncho's Pizza and Sticks</h1>
+  </header>
+
+  <div class="app-container ">
+    <h1 class=" text-center">Confirma tu reservación</h1>
+
+    <!-- Create Section -->
+    <h2 class=" text-center">Agrega tu nombre completo</h2>
+    <div class="form-group">
+      <input type="text" class="create-input" placeholder="Nombre Completo">
+      <button type="button" class="button" id="createButton">Reserva</button>
+    </div>
+
+    <!-- Read Section -->
+    <h2>Lista de reservaciones</h2>
+    <ul id="elementList" class="element-list"></ul>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2023 Restaurante Poncho's Pizza and Sticks. Todos los derechos reservados.</p>
+      <p>Dirección: Calle Principal, Ciudad, País | Teléfono: +123 456 789 | Email: info@ponchospizza.com</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
